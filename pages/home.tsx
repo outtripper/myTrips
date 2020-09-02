@@ -23,8 +23,11 @@ export default ()=> {
       <div className="text-2xl font-semibold">My Trips</div>
     </header>
 
-    {listActiveTrips.map( t => <div key={t.id}>
+    <section>
+      <div>Next Trips</div>
+      {listActiveTrips.map( t => <div key={t.id}>
       <Card
+      className="rounded shadow"
       hoverable
       style={{ width: 240 }}
       cover={<img alt="photo" src={t.program.photoGallery[0]} />}
@@ -32,5 +35,10 @@ export default ()=> {
       <Meta title={t.destination.description} description={t.program.description} />
     </Card>,
     </div>)}
+    </section>
+
+    <section>
+      <div>Previous Trips</div>
+    </section>
   </div>)
 }
