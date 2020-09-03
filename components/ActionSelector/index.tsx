@@ -13,11 +13,11 @@ interface Props {
   updateFuncion: Function
 }
 
-const ICON_SIZE="32px"
+const ICON_SIZE="24px"
 
 export default (props:Props) => {
   const {actionSelected,updateFuncion} = props
-
+  console.log(actionSelected)
   return (<div>
     <div className="flex justify-between px-4">
       <div onClick={() => updateFuncion(ACTION.CONTACT)} className={`text-center ${actionSelected === ACTION.CONTACT ? 'text-teal-500' :''}`}>

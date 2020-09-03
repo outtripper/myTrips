@@ -19,7 +19,12 @@ type MyTrip = {
       id: string,
       title: string,
       text: string,
-      photos: Array<string>
+      photos: Array<string>   
+    }>,
+    contactInfo: Array<{
+      kind:string,
+      text: string,
+      value: string
     }>
   },
   dates: {
