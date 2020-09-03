@@ -30,5 +30,19 @@ type MyTrip = {
   dates: {
     from: number,
     to: number
+  },
+  invoice: {
+    id: string,
+    items: [{
+      id: string,
+      description: string,
+      amount: number
+    }],
+    payments:[{
+      id: string,
+      description: string,
+      date: number,
+      amount: number
+    }]
   }
 }
