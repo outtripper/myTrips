@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import {getActiveTrips} from '../services/business'
 import Loading from '../components/Loading'
 import {Card} from 'antd'
+import {useRouter} from 'next/router'
 
 const {Meta} = Card
 
 export default ()=> {
   const [listActiveTrips,setListActiveTrips] = useState<Array<MyTrip>>(null)
+  const router = useRouter()
 
   useEffect( () => {
     (async ()=>{
@@ -25,7 +27,7 @@ export default ()=> {
 
     <section>
       <div>Next Trips</div>
-      {listActiveTrips.map( t => <div key={t.id}>
+      {listActiveTrips.map( t => <div onClick={() => router.push('/trip')} key={t.id}>
       <Card
       className="rounded shadow"
       hoverable

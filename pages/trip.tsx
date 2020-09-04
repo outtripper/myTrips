@@ -77,7 +77,7 @@ export default () => {
         </div>
       </div>
       <div className="flex w-full justify-center mt-8 pb-8 bg-black">
-        <Button type="primary" shape="round" icon={<CreditCardOutlined />} >Make a payment</Button>
+        <Button onClick={() => router.push('/payment/select_payment_method')} type="primary" shape="round" icon={<CreditCardOutlined />} >Make a payment</Button>
       </div>
     </div>)
   }
