@@ -1,7 +1,9 @@
 import React from 'react'
 import {Image, Button} from 'antd'
+import {useRouter} from 'next/router'
 
 export default () => {
+  const router = useRouter()
 
   return (<div>
     
@@ -9,7 +11,7 @@ export default () => {
      <Image src='../assets/images/paymentSuccess.svg'/>
     </div>
     <div>
-      <Button type="primary">Go to the Trip</Button>
+      <Button onClick={()=>router.push('/trip')} type="primary">Go to the Trip</Button>
     </div>
   </div>)
 }
